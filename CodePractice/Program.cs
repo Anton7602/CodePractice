@@ -1,0 +1,16 @@
+﻿using CodePracticeLeetCode;
+
+namespace CodePractice
+{
+    internal class Program
+    {
+        static IProblem problem = new Problem1_TwoSum();
+
+        static void Main(string[] args)
+        {
+            problem.ReadInput();
+            problem.Solve();
+            problem.ShowAnswer();
+        }
+    }
+}
