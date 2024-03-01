@@ -7,9 +7,9 @@
      */
     public class Problem2_AddTwoNumbers : IProblem
     {
-        ListNode _l1;
-        ListNode _l2;
-        ListNode _output;
+        ListNode _l1 { get; set; }
+        ListNode _l2 { get; set; }
+        ListNode _output { get; set; }
 
 
         public ListNode Solve(ListNode l1, ListNode l2)
@@ -54,9 +54,9 @@
 
         public void ReadInput()
         {
-            Console.WriteLine("Enter first list");
+            Console.WriteLine("Enter number for a first list (l1)");
             _l1 = ListNode.ToList(Console.ReadLine());
-            Console.WriteLine("Enter second list");
+            Console.WriteLine("Enter number for a second list (l2)");
             _l2 = ListNode.ToList(Console.ReadLine());
 
         }
