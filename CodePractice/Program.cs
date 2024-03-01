@@ -4,7 +4,7 @@ namespace CodePractice
 {
     internal class Program
     {
-        static IProblem problem = new Problem1_TwoSum();
+        static IProblem problem = new Problem2_AddTwoNumbers();
 
         static void Main(string[] args)
         {

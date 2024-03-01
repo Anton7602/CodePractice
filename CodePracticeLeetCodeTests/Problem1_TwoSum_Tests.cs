@@ -2,7 +2,7 @@
 {
     public class Problem1_TwoSum_Tests
     {
-        private Problem1_TwoSum problem { get; set; } = null;
+        private Problem1_TwoSum problem { get; set; }
 
         [SetUp]
         public void Setup()
