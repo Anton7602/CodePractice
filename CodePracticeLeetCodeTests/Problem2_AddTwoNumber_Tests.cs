@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CodePracticeLeetCodeTests
+﻿namespace CodePracticeLeetCodeTests
 {
-    public class Problem2_AddTwoNumber_Tests
+    internal class Problem2_AddTwoNumber_Tests
     {
         private Problem2_AddTwoNumbers problem { get; set; }
 

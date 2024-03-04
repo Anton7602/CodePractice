@@ -1,6 +1,6 @@
 ﻿namespace CodePracticeLeetCodeTests
 {
-    public class Problem1_TwoSum_Tests
+    internal class Problem1_TwoSum_Tests
     {
         private Problem1_TwoSum problem { get; set; }
 

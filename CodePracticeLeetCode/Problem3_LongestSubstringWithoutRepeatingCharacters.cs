@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CodePracticeLeetCode
+﻿namespace CodePracticeLeetCode
 {
+// Given a string s, find the length of the longest substring without repeating characters.
     public class Problem3_LongestSubstringWithoutRepeatingCharacters : IProblem
     {
         string? _s {  get; set; }
