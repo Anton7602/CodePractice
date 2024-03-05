@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CodePracticeLeetCode
+﻿namespace CodePracticeLeetCode
 {
-//Given a string s, return the longest palindromic substring in s.
+    //Given a string s, return the longest palindromic substring in s.
     public class Problem5_LongestPalindromicSubstring : IProblem
     {
         string? _s {  get; set; }

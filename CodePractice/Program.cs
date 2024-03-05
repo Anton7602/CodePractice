@@ -4,7 +4,7 @@ namespace CodePractice
 {
     internal class Program
     {
-        static IProblem problem = new Problem5_LongestPalindromicSubstring();
+        static IProblem problem = new Problem6_ZigzagConversion();
 
         static void Main(string[] args)
         {
