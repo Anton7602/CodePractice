@@ -4,7 +4,7 @@ namespace CodePractice
 {
     internal class Program
     {
-        static IProblem problem = new Problem4_MedianOfTwoSortedArrays();
+        static IProblem problem = new Problem5_LongestPalindromicSubstring();
 
         static void Main(string[] args)
         {
