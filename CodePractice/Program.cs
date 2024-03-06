@@ -4,7 +4,7 @@ namespace CodePractice
 {
     internal class Program
     {
-        static IProblem problem = new Problem7_ReverseInteger();
+        static IProblem problem = new Problem9_PalindromeNumber();
 
         static void Main(string[] args)
         {
