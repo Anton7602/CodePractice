@@ -4,7 +4,7 @@ namespace CodePractice
 {
     internal class Program
     {
-        static IProblem problem = new Problem6_ZigzagConversion();
+        static IProblem problem = new Problem7_ReverseInteger();
 
         static void Main(string[] args)
         {
