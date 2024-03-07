@@ -4,7 +4,7 @@ namespace CodePractice
 {
     internal class Program
     {
-        static IProblem problem = new Problem9_PalindromeNumber();
+        static IProblem problem = new Problem8_StringToIntegerAtoi();
 
         static void Main(string[] args)
         {
