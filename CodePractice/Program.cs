@@ -4,7 +4,7 @@ namespace CodePractice
 {
     internal class Program
     {
-        static IProblem problem = new Problem8_StringToIntegerAtoi();
+        static IProblem problem = new Problem10_RegularExpressionMatching();
 
         static void Main(string[] args)
         {
