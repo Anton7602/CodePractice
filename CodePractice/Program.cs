@@ -4,7 +4,7 @@ namespace CodePractice
 {
     internal class Program
     {
-        static IProblem problem = new Problem11_ContainerWithMostWater();
+        static IProblem problem = new Problem0011_ContainerWithMostWater();
 
         static void Main(string[] args)
         {

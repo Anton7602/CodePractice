@@ -1,13 +1,13 @@
 ﻿namespace CodePracticeLeetCodeTests
 {
-    internal class Problem04_MedianOfTwoSortedArrays_Tests
+    internal class Problem0004_MedianOfTwoSortedArrays_Tests
     {
-        private Problem04_MedianOfTwoSortedArrays problem;
+        private Problem0004_MedianOfTwoSortedArrays problem;
 
         [SetUp]
         public void Setup()
         {
-            problem = new Problem04_MedianOfTwoSortedArrays();
+            problem = new Problem0004_MedianOfTwoSortedArrays();
         }
 
         [Test]

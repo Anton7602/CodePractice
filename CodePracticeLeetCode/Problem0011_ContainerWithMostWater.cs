@@ -6,7 +6,7 @@
      * Return the maximum amount of water a container can store.
      * Notice that you may not slant the container.
      */
-    public class Problem11_ContainerWithMostWater : IProblem
+    public class Problem0011_ContainerWithMostWater : IProblem
     {
         private int[] _height { get; set; } = new int[0];
         private int _output {  get; set; }

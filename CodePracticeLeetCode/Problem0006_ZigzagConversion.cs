@@ -8,7 +8,7 @@
      * And then read line by line: "PAHNAPLSIIGYIR"
      * Write the code that will take a string and make this conversion given a number of rows:
      */
-    public class Problem06_ZigzagConversion : IProblem
+    public class Problem0006_ZigzagConversion : IProblem
     {
         private string? _s { get; set; }
         private int _numRows { get; set; }

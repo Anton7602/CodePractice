@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace CodePracticeLeetCodeTests
 {
-    internal class Problem11_ContainerWithMostWater_Tests
+    internal class Problem0011_ContainerWithMostWater_Tests
     {
-        private Problem11_ContainerWithMostWater problem;
+        private Problem0011_ContainerWithMostWater problem;
 
         [SetUp]
         public void Setup()
         {
-            problem = new Problem11_ContainerWithMostWater();
+            problem = new Problem0011_ContainerWithMostWater();
         }
 
         [Test]

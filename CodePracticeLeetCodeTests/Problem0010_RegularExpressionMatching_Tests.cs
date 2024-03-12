@@ -1,13 +1,13 @@
 ﻿namespace CodePracticeLeetCodeTests
 {
-    internal class Problem10_RegularExpressionMatching_Tests
+    internal class Problem0010_RegularExpressionMatching_Tests
     {
-        private Problem10_RegularExpressionMatching problem;
+        private Problem0010_RegularExpressionMatching problem;
 
         [SetUp]
         public void Setup()
         {
-            problem = new Problem10_RegularExpressionMatching();
+            problem = new Problem0010_RegularExpressionMatching();
         }
 
         [Test]

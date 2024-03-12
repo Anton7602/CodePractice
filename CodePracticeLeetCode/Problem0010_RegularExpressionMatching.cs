@@ -6,7 +6,7 @@
      * '*' Matches zero or more of the preceding element.
      * The matching should cover the entire input string (not partial).
      */
-    public class Problem10_RegularExpressionMatching : IProblem
+    public class Problem0010_RegularExpressionMatching : IProblem
     {
         private string? _s { get; set; }
         private string? _p { get; set; }

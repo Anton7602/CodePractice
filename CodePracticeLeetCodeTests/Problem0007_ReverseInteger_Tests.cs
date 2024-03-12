@@ -1,13 +1,13 @@
 ﻿namespace CodePracticeLeetCodeTests
 {
-    internal class Problem07_ReverseInteger_Tests
+    internal class Problem0007_ReverseInteger_Tests
     {
-        private Problem07_ReverseInteger problem;
+        private Problem0007_ReverseInteger problem;
 
         [SetUp]
         public void Setup()
         {
-            problem = new Problem07_ReverseInteger();
+            problem = new Problem0007_ReverseInteger();
         }
 
         [Test]

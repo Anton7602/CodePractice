@@ -5,7 +5,7 @@
      * You may assume that each input would have exactly one solution, and you may not use the same element twice.
      * You can return the answer in any order.
      */
-    public class Problem01_TwoSum : IProblem
+    public class Problem0001_TwoSum : IProblem
     {
         public int[] _nums = [];
         public int _target;

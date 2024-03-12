@@ -1,13 +1,13 @@
 ﻿namespace CodePracticeLeetCodeTests
 {
-    public class Problem08_StringToIntegerAtoi_Tests
+    public class Problem0008_StringToIntegerAtoi_Tests
     {
-        private Problem08_StringToIntegerAtoi problem;
+        private Problem0008_StringToIntegerAtoi problem;
 
         [SetUp]
         public void Setup()
         {
-            problem = new Problem08_StringToIntegerAtoi();
+            problem = new Problem0008_StringToIntegerAtoi();
         }
 
         [Test]

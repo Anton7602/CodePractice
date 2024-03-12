@@ -7,7 +7,7 @@ namespace CodePracticeLeetCode
      * Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
      * The overall run time complexity should be O(log (m+n)).
      */
-    public class Problem04_MedianOfTwoSortedArrays : IProblem
+    public class Problem0004_MedianOfTwoSortedArrays : IProblem
     {
         int[] _nums1 { get; set; } = [];
         int[] _nums2 { get; set; } = [];
