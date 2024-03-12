@@ -1,10 +1,10 @@
 ﻿namespace CodePracticeLeetCode
 {
-/*
-You are given two non-empty linked lists representing two non-negative integers. 
-The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
-*/
+    /*
+     * You are given two non-empty linked lists representing two non-negative integers. 
+     * The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
+     * You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+     */
     public class Problem2_AddTwoNumbers : IProblem
     {
         ListNode _l1 { get; set; }
@@ -40,7 +40,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
                 value += secondNode.val;
                 nextSecond = secondNode.next;
             }
-            if (value>=10)
+            if (value >= 10)
             {
                 value = value % 10;
                 overflow = true;
@@ -88,11 +88,11 @@ You may assume the two numbers do not contain any leading zero, except the numbe
             if (string.IsNullOrEmpty(number)) return new ListNode();
             char[] digits = number.ToCharArray();
             Array.Reverse(digits);
-            ListNode firstNode = new ListNode(digits[0]-'0');
+            ListNode firstNode = new ListNode(digits[0] - '0');
             ListNode previousNode = firstNode;
-            for (int i = 1; i<digits.Length; i++)
+            for (int i = 1; i < digits.Length; i++)
             {
-                ListNode currentNode = new ListNode(digits[i]-'0');
+                ListNode currentNode = new ListNode(digits[i] - '0');
                 previousNode.next = currentNode;
                 previousNode = currentNode;
             }
@@ -113,7 +113,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
         {
             string number = string.Empty;
             ListNode currentListNode = this;
-            while(currentListNode!=null)
+            while (currentListNode != null)
             {
                 number += currentListNode.val.ToString();
                 currentListNode = currentListNode.next;
@@ -124,7 +124,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
         private static string ReverseString(string originalString)
         {
             char[] stringArray = originalString.ToCharArray();
-            Array.Reverse(stringArray); 
+            Array.Reverse(stringArray);
             return new string(stringArray);
         }
     }

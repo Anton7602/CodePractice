@@ -1,10 +1,10 @@
 ﻿namespace CodePracticeLeetCode
 {
-//Given an integer x, return true if x is a palindrome, and false otherwise.
+    //Given an integer x, return true if x is a palindrome, and false otherwise.
     public class Problem9_PalindromeNumber : IProblem
     {
         private int _x { get; set; }
-        private bool _output {  get; set; }
+        private bool _output { get; set; }
 
         public bool SolveAlternative(int x)
         {

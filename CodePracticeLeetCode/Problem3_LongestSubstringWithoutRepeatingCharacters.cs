@@ -1,24 +1,24 @@
 ﻿namespace CodePracticeLeetCode
 {
-// Given a string s, find the length of the longest substring without repeating characters.
+    // Given a string s, find the length of the longest substring without repeating characters.
     public class Problem3_LongestSubstringWithoutRepeatingCharacters : IProblem
     {
-        string? _s {  get; set; }
+        string? _s { get; set; }
 
-        int _output {  get; set; }
+        int _output { get; set; }
 
         public int Solve(string s)
         {
             int counter = 0;
             int maxLenght = 0;
             Dictionary<char, int> map = new Dictionary<char, int>();
-            for(int i =0; i<s.Length; i++)
+            for (int i = 0; i < s.Length; i++)
             {
                 if (!map.ContainsKey(s[i]))
                 {
                     map.Add(s[i], i);
                     counter++;
-                    if (counter>maxLenght)
+                    if (counter > maxLenght)
                     {
                         maxLenght = counter;
                     }
@@ -26,7 +26,7 @@
                 else
                 {
                     counter = i - map[s[i]];
-                    foreach(var item in map)
+                    foreach (var item in map)
                     {
                         if (item.Value < map[s[i]])
                         {
