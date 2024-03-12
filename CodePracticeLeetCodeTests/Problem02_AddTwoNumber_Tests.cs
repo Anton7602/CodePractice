@@ -1,13 +1,13 @@
 ﻿namespace CodePracticeLeetCodeTests
 {
-    internal class Problem2_AddTwoNumber_Tests
+    internal class Problem02_AddTwoNumber_Tests
     {
-        private Problem2_AddTwoNumbers problem { get; set; }
+        private Problem02_AddTwoNumbers problem { get; set; }
 
         [SetUp]
         public void Setup()
         {
-            problem = new Problem2_AddTwoNumbers();
+            problem = new Problem02_AddTwoNumbers();
         }
 
         [Test]

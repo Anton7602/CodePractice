@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace CodePracticeLeetCodeTests
 {
-    internal class Problem9_PalindromeNumber_Tests
+    internal class Problem09_PalindromeNumber_Tests
     {
-        private Problem9_PalindromeNumber problem;
+        private Problem09_PalindromeNumber problem;
 
         [SetUp]
         public void Setup()
         {
-            problem = new Problem9_PalindromeNumber();
+            problem = new Problem09_PalindromeNumber();
         }
 
         [Test]

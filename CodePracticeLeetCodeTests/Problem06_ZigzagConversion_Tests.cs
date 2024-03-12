@@ -1,13 +1,13 @@
 ﻿namespace CodePracticeLeetCodeTests
 {
-    internal class Problem6_ZigzagConversion_Tests
+    internal class Problem06_ZigzagConversion_Tests
     {
-        private Problem6_ZigzagConversion problem;
+        private Problem06_ZigzagConversion problem;
 
         [SetUp]
         public void Setup()
         {
-            problem = new Problem6_ZigzagConversion();
+            problem = new Problem06_ZigzagConversion();
         }
 
         [Test]

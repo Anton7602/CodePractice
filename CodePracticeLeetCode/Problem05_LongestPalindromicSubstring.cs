@@ -1,7 +1,7 @@
 ﻿namespace CodePracticeLeetCode
 {
     //Given a string s, return the longest palindromic substring in s.
-    public class Problem5_LongestPalindromicSubstring : IProblem
+    public class Problem05_LongestPalindromicSubstring : IProblem
     {
         string? _s {  get; set; }
         string? _output {  get; set; }

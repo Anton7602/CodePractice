@@ -13,7 +13,7 @@
      * Only the space character ' ' is considered a whitespace character.
      * Do not ignore any characters other than the leading whitespace or the rest of the string after the digits.
      */
-    public class Problem8_StringToIntegerAtoi : IProblem
+    public class Problem08_StringToIntegerAtoi : IProblem
     {
         private string? _s { get; set; }
         private int _output { get; set; }

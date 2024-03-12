@@ -1,13 +1,13 @@
 ﻿namespace CodePracticeLeetCodeTests
 {
-    internal class Problem3_LongestSubstringWithoutRepeatingCharacters_Tests
+    internal class Problem03_LongestSubstringWithoutRepeatingCharacters_Tests
     {
-        private Problem3_LongestSubstringWithoutRepeatingCharacters problem;
+        private Problem03_LongestSubstringWithoutRepeatingCharacters problem;
 
         [SetUp]
         public void Setup()
         {
-            problem = new Problem3_LongestSubstringWithoutRepeatingCharacters();
+            problem = new Problem03_LongestSubstringWithoutRepeatingCharacters();
         }
 
         [Test]

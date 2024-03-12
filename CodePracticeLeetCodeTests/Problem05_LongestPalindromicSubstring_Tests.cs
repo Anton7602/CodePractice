@@ -1,13 +1,13 @@
 ﻿namespace CodePracticeLeetCodeTests
 {
-    internal class Problem5_LongestPalindromicSubstring_Tests
+    internal class Problem05_LongestPalindromicSubstring_Tests
     {
-        private Problem5_LongestPalindromicSubstring problem;
+        private Problem05_LongestPalindromicSubstring problem;
 
         [SetUp]
         public void Setup()
         {
-            problem = new Problem5_LongestPalindromicSubstring();
+            problem = new Problem05_LongestPalindromicSubstring();
         }
 
         [Test]

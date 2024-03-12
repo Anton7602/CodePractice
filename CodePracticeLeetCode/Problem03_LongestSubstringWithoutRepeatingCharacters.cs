@@ -1,7 +1,7 @@
 ﻿namespace CodePracticeLeetCode
 {
     // Given a string s, find the length of the longest substring without repeating characters.
-    public class Problem3_LongestSubstringWithoutRepeatingCharacters : IProblem
+    public class Problem03_LongestSubstringWithoutRepeatingCharacters : IProblem
     {
         string? _s { get; set; }
 
