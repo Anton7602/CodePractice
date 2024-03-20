@@ -4,7 +4,7 @@ namespace CodePractice
 {
     internal class Program
     {
-        static IProblem problem = new Problem0019_RemoveNthNodeFromEndOfList();
+        static IProblem problem = new Problem0021_MergeTwoSortedLists();
 
         static void Main(string[] args)
         {

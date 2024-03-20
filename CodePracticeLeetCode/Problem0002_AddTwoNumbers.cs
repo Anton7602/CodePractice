@@ -121,6 +121,21 @@
             return ReverseString(number);
         }
 
+        public override bool Equals(object? obj)
+        {
+            if (obj == null) return false;
+            if (!(obj is ListNode)) return false;
+            return CompareListNodes(this, obj as ListNode);
+        }
+
+        private bool CompareListNodes(ListNode? node1, ListNode? node2)
+        {
+            if (node1 == null && node2 == null) return true;
+            if (node1 == null || node2 == null) return false;
+            if (node1.val!=node2.val) return false;
+            return CompareListNodes(node1.next, node2.next);
+        }
+
         private static string ReverseString(string originalString)
         {
             char[] stringArray = originalString.ToCharArray();
