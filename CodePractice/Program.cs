@@ -4,7 +4,7 @@ namespace CodePractice
 {
     internal class Program
     {
-        static IProblem problem = new Problem0021_MergeTwoSortedLists();
+        static IProblem problem = new Problem0022_GenerateParentheses();
 
         static void Main(string[] args)
         {
