@@ -6,7 +6,7 @@
         string? _s {  get; set; }
         string? _output {  get; set; }
 
-        public string Solve(string? s)
+        public string LongestPalindrome(string? s)
         {
             if (string.IsNullOrEmpty(s)) return string.Empty;
             string maxSubstring = s[0].ToString();
@@ -54,19 +54,17 @@
 
         public void ReadInput()
         {
-            Console.WriteLine("Input string (s)");
-            _s = Console.ReadLine();
+            _s = ProblemIO.ReadStringFromConsole("Input string (s)");
         }
 
         public void ShowAnswer()
         {
-            Console.WriteLine("Answer:");
-            Console.WriteLine(_output);
+            ProblemIO.WriteValue(_output);
         }
 
         public void Solve()
         {
-            _output = Solve(_s);
+            _output = LongestPalindrome(_s);
         }
     }
 }

@@ -4,7 +4,7 @@ namespace CodePractice
 {
     internal class Program
     {
-        static IProblem problem = new Problem0023_MergeKSortedLists();
+        static IProblem problem = new Problem0014_LongestCommonPrefix();
 
         static void Main(string[] args)
         {

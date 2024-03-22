@@ -15,7 +15,7 @@
         {
             int num = 3;
             string output = "III";
-            Assert.That(problem.Solve(num), Is.EqualTo(output));
+            Assert.That(problem.IntToRoman(num), Is.EqualTo(output));
         }
 
         [Test]
@@ -23,7 +23,7 @@
         {
             int num = 58;
             string output = "LVIII";
-            Assert.That(problem.Solve(num), Is.EqualTo(output));
+            Assert.That(problem.IntToRoman(num), Is.EqualTo(output));
         }
 
         [Test]
@@ -31,7 +31,7 @@
         {
             int num = 1994;
             string output = "MCMXCIV";
-            Assert.That(problem.Solve(num), Is.EqualTo(output));
+            Assert.That(problem.IntToRoman(num), Is.EqualTo(output));
         }
 
         [Test]
@@ -39,7 +39,7 @@
         {
             int num = 489;
             string output = "CDLXXXIX";
-            Assert.That(problem.Solve(num), Is.EqualTo(output));
+            Assert.That(problem.IntToRoman(num), Is.EqualTo(output));
         }
 
         [Test]
@@ -47,7 +47,7 @@
         {
             int num = 894;
             string output = "DCCCXCIV";
-            Assert.That(problem.Solve(num), Is.EqualTo(output));
+            Assert.That(problem.IntToRoman(num), Is.EqualTo(output));
         }
 
         [Test]
@@ -55,7 +55,7 @@
         {
             int num = 512;
             string output = "DXII";
-            Assert.That(problem.Solve(num), Is.EqualTo(output));
+            Assert.That(problem.IntToRoman(num), Is.EqualTo(output));
         }
 
 
@@ -64,7 +64,7 @@
         {
             int num = 10;
             string output = "X";
-            Assert.That(problem.Solve(num), Is.EqualTo(output));
+            Assert.That(problem.IntToRoman(num), Is.EqualTo(output));
         }
     }
 }

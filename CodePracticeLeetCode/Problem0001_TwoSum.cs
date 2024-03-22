@@ -11,7 +11,7 @@
         public int _target;
         public int[] _output = [];
 
-        public int[] Solve(int[] nums, int target)
+        public int[] TwoSum(int[] nums, int target)
         {
             int[] answer = new int[2];
             Dictionary<int, int> indexMap = new Dictionary<int, int>();
@@ -35,42 +35,18 @@
 
         public void ReadInput()
         {
-            try
-            {
-                Console.WriteLine("Enter Array of Integers (nums):");
-                string? line1 = Console.ReadLine();
-                if (!string.IsNullOrEmpty(line1))
-                {
-                    var splitLine1 = line1.Split(' ');
-                    _nums = new int[splitLine1.Length];
-                    for (int i = 0; i < splitLine1.Length; i++)
-                    {
-                        _nums[i] = Convert.ToInt32(splitLine1[i]);
-                    }
-                }
-                Console.WriteLine("Enter Integer (target):");
-                string? line2 = Console.ReadLine();
-                _target = Convert.ToInt32(line2);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Provided invalid input data");
-                Console.WriteLine(ex.Message);
-            }
+            _nums = ProblemIO.ReadIntArrayFromConsole("Enter Array of Integers (nums):");
+            _target = ProblemIO.ReadIntFromConsole("Enter Integer (target):");
         }
 
         public void Solve()
         {
-            _output = Solve(_nums, _target);
+            _output = TwoSum(_nums, _target);
         }
 
         public void ShowAnswer()
         {
-            Console.WriteLine("Answer:");
-            foreach (int number in _output)
-            {
-                Console.Write(number + " ");
-            }
+            ProblemIO.WriteValue(_output);
         }
     }
 }

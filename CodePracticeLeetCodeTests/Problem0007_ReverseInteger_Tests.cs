@@ -15,7 +15,7 @@
         {
             int x = 123;
             int output = 321;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.Reverse(x), Is.EqualTo(output));
         }
 
 
@@ -24,7 +24,7 @@
         {
             int x = -123;
             int output = -321;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.Reverse(x), Is.EqualTo(output));
         }
 
 
@@ -33,7 +33,7 @@
         {
             int x = 120;
             int output = 21;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.Reverse(x), Is.EqualTo(output));
         }
 
         [Test]
@@ -41,7 +41,7 @@
         {
             int x = -120;
             int output = -21;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.Reverse(x), Is.EqualTo(output));
         }
 
         [Test]
@@ -49,7 +49,7 @@
         {
             int x = 0;
             int output = 0;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.Reverse(x), Is.EqualTo(output));
         }
 
         [Test]
@@ -57,7 +57,7 @@
         {
             int x = 2147483647;
             int output = 0;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.Reverse(x), Is.EqualTo(output));
         }
 
         [Test]
@@ -65,7 +65,7 @@
         {
             int x = -2147483648;
             int output = 0;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.Reverse(x), Is.EqualTo(output));
         }
 
         [Test]
@@ -73,7 +73,7 @@
         {
             int x = 2147483641;
             int output = 1463847412;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.Reverse(x), Is.EqualTo(output));
         }
 
         [Test]
@@ -81,7 +81,7 @@
         {
             int x = -2147483641;
             int output = -1463847412;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.Reverse(x), Is.EqualTo(output));
         }
 
         [Test]
@@ -89,7 +89,7 @@
         {
             int x = 332165465;
             int output = 564561233;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.Reverse(x), Is.EqualTo(output));
         }
     }
 }

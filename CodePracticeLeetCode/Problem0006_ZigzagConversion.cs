@@ -14,7 +14,7 @@
         private int _numRows { get; set; }
         private string? _output { get; set; }
 
-        public string Solve(string? s, int numRows)
+        public string Convert(string? s, int numRows)
         {
             if (numRows == 1 || s.Length < 2) return s;
             string[] rows = new string[numRows];
@@ -47,24 +47,18 @@
 
         public void ReadInput()
         {
-            Console.WriteLine("Input original string (s):");
-            _s = Console.ReadLine();
-            Console.WriteLine("Input number of rows (numRows):");
-            if (Int32.TryParse(Console.ReadLine(), out int numRows))
-            {
-                _numRows = numRows;
-            }
+            _s = ProblemIO.ReadStringFromConsole("Input original string (s):");
+            _numRows = ProblemIO.ReadIntFromConsole("Input number of rows (numRows):");
         }
 
         public void ShowAnswer()
         {
-            Console.WriteLine("Answer:");
-            Console.WriteLine(_output);
+            ProblemIO.WriteValue(_output);
         }
 
         public void Solve()
         {
-            _output = Solve(_s, _numRows);
+            _output = Convert(_s, _numRows);
         }
     }
 }

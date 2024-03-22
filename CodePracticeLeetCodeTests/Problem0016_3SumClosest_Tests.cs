@@ -15,7 +15,7 @@
             int[] nums = { -1,2,1,-4 };
             int target = 1;
             int output = 2;
-            Assert.That(problem.Solve(nums, target), Is.EqualTo(output));
+            Assert.That(problem.ThreeSumClosest(nums, target), Is.EqualTo(output));
         }
 
         [Test]
@@ -24,7 +24,7 @@
             int[] nums = { 0,0,0 };
             int target = 1;
             int output = 0;
-            Assert.That(problem.Solve(nums, target), Is.EqualTo(output));
+            Assert.That(problem.ThreeSumClosest(nums, target), Is.EqualTo(output));
         }
     }
 }

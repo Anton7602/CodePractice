@@ -14,7 +14,7 @@
         {
             int n = 1;
             List<string> output = new List<string>() { "()"};
-            Assert.That(problem.Solve(n), Is.EqualTo(output));
+            Assert.That(problem.GenerateParenthesis(n), Is.EqualTo(output));
         }
 
         [Test]
@@ -22,7 +22,7 @@
         {
             int n = 2;
             List<string> output = new List<string>() { "(())", "()()" };
-            Assert.That(problem.Solve(n), Is.EqualTo(output));
+            Assert.That(problem.GenerateParenthesis(n), Is.EqualTo(output));
         }
 
         [Test]
@@ -30,7 +30,7 @@
         {
             int n = 3;
             List<string> output = new List<string>() { "((()))", "(()())", "(())()", "()(())", "()()()" };
-            Assert.That(problem.Solve(n), Is.EqualTo(output));
+            Assert.That(problem.GenerateParenthesis(n), Is.EqualTo(output));
         }
     }
 }

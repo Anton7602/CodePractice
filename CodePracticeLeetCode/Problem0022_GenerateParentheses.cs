@@ -6,7 +6,7 @@
         private int _n {  get; set; }
         private IList<string>? _output {  get; set; }
 
-        public IList<string> Solve(int n)
+        public IList<string> GenerateParenthesis(int n)
         {
             List<string> combinationsList = new List<string>();
             AddNextBraket(combinationsList, "(", n - 1, 1);
@@ -35,15 +35,7 @@
 
         public void ReadInput()
         {
-            Console.WriteLine("Input number of pairs of parenthesis (n):");
-            if (int.TryParse(Console.ReadLine(), out int n))
-            {
-                _n = n;
-            } else
-            {
-                Console.WriteLine("Provided invalid input");
-                throw new ArgumentException();
-            }
+            _n = ProblemIO.ReadIntFromConsole("Input number of pairs of parenthesis (n):");
         }
 
         public void ShowAnswer()
@@ -53,12 +45,13 @@
             foreach(string combination in _output)
             {
                 Console.WriteLine($"Combination {index}: {combination}");
+                index++;
             }
         }
 
         public void Solve()
         {
-            _output = Solve(_n);
+            _output = GenerateParenthesis(_n);
         }
     }
 }

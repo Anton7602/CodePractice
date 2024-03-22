@@ -11,7 +11,7 @@
     {
         private string? _s { get; set; }
         private bool _output { get; set; }
-        public bool Solve(string? s)
+        public bool IsValid(string? s)
         {
             Stack<char> brakets = new Stack<char>();
             foreach (char symbol in s)
@@ -47,19 +47,17 @@
 
         public void ReadInput()
         {
-            Console.WriteLine("Enter a string (s):");
-            _s = Console.ReadLine();
+            _s = ProblemIO.ReadStringFromConsole("Enter a string (s):");
         }
 
         public void ShowAnswer()
         {
-            Console.WriteLine("Answer:");
-            Console.WriteLine(_output);
+            ProblemIO.WriteValue(_output);
         }
 
         public void Solve()
         {
-            _output = Solve(_s);
+            _output = IsValid(_s);
         }
     }
 }

@@ -21,7 +21,7 @@ namespace CodePracticeLeetCodeTests
         {
             int x = 121;
             bool output = true;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.IsPalindrome(x), Is.EqualTo(output));
         }
 
         [Test]
@@ -29,7 +29,7 @@ namespace CodePracticeLeetCodeTests
         {
             int x = -121;
             bool output = false;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.IsPalindrome(x), Is.EqualTo(output));
         }
 
         [Test]
@@ -37,7 +37,7 @@ namespace CodePracticeLeetCodeTests
         {
             int x = 10;
             bool output = false;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.IsPalindrome(x), Is.EqualTo(output));
         }
 
         [Test]
@@ -45,7 +45,7 @@ namespace CodePracticeLeetCodeTests
         {
             int x = 9;
             bool output = true;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.IsPalindrome(x), Is.EqualTo(output));
         }
 
         [Test]
@@ -53,7 +53,7 @@ namespace CodePracticeLeetCodeTests
         {
             int x = -9;
             bool output = false;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.IsPalindrome(x), Is.EqualTo(output));
         }
 
         [Test]
@@ -61,7 +61,7 @@ namespace CodePracticeLeetCodeTests
         {
             int x = Int32.MaxValue;
             bool output = false;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.IsPalindrome(x), Is.EqualTo(output));
         }
 
         [Test]
@@ -69,7 +69,7 @@ namespace CodePracticeLeetCodeTests
         {
             int x = 123454321;
             bool output = true;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.IsPalindrome(x), Is.EqualTo(output));
         }
 
         [Test]
@@ -77,7 +77,7 @@ namespace CodePracticeLeetCodeTests
         {
             int x = 0;
             bool output = true;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.IsPalindrome(x), Is.EqualTo(output));
         }
 
         [Test]
@@ -85,7 +85,7 @@ namespace CodePracticeLeetCodeTests
         {
             int x = 951464159;
             bool output = true;
-            Assert.That(problem.Solve(x), Is.EqualTo(output));
+            Assert.That(problem.IsPalindrome(x), Is.EqualTo(output));
         }
     }
 }

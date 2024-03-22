@@ -9,7 +9,7 @@
         private string[] _strs { get; set; } = new string[0];
         private string? _output { get; set; }
 
-        public string Solve(string[] strs)
+        public string LongestCommonPrefix(string[] strs)
         {
             if (strs.Length < 1) return string.Empty;
             string commonSubstring = strs[0];
@@ -38,32 +38,17 @@
 
         public void ReadInput()
         {
-            Console.WriteLine("Enter number of strings (strs.Lenghth):");
-            if (int.TryParse(Console.ReadLine(), out int n))
-            {
-                _strs = new string[n];
-                for (int i = 0; i < n; i++)
-                {
-                    Console.WriteLine($"Enter string {i+1} (strs[{i}]):");
-                    _strs[i] = Console.ReadLine();
-                }
-            }
-            else
-            {
-                Console.WriteLine("Invalid lenght of strs array provided.");
-                throw new InvalidOperationException();
-            }
+            _strs = ProblemIO.ReadStringArrayFromConsole("Enter array strings (strs):");
         }
 
         public void ShowAnswer()
         {
-            Console.WriteLine("Answer:");
-            Console.WriteLine(_output);
+            ProblemIO.WriteValue(_output);
         }
 
         public void Solve()
         {
-            _output = Solve(_strs);
+            _output = LongestCommonPrefix(_strs);
         }
     }
 }

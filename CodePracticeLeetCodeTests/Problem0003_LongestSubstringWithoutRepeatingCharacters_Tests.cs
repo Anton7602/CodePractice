@@ -15,7 +15,7 @@
         {
             string s = "abcabcbb";
             int output = 3;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.LengthOfLongestSubstring(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -23,7 +23,7 @@
         {
             string s = "bbbbb";
             int output = 1;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.LengthOfLongestSubstring(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -31,7 +31,7 @@
         {
             string s = "pwwkew";
             int output = 3;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.LengthOfLongestSubstring(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -39,7 +39,7 @@
         {
             string s = "aab";
             int output = 2;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.LengthOfLongestSubstring(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -47,7 +47,7 @@
         {
             string s = "dvdf";
             int output = 3;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.LengthOfLongestSubstring(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -55,7 +55,7 @@
         {
             string s = "tmmzuxt";
             int output = 5;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.LengthOfLongestSubstring(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -63,7 +63,7 @@
         {
             string s = "";
             int output = 0;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.LengthOfLongestSubstring(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -75,7 +75,7 @@
                 s += "a";
             }
             int output = 1;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.LengthOfLongestSubstring(s), Is.EqualTo(output));
         }
 
 

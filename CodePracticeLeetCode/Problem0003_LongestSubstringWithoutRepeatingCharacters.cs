@@ -7,7 +7,7 @@
 
         int _output { get; set; }
 
-        public int Solve(string s)
+        public int LengthOfLongestSubstring(string s)
         {
             int counter = 0;
             int maxLenght = 0;
@@ -41,19 +41,17 @@
 
         public void ReadInput()
         {
-            Console.WriteLine("Enter Input string (s)");
-            _s = Console.ReadLine();
+            _s = ProblemIO.ReadStringFromConsole("Enter Input string (s)");
         }
 
         public void ShowAnswer()
         {
-            Console.WriteLine("Answer:");
-            Console.WriteLine(_output);
+            ProblemIO.WriteValue(_output);
         }
 
         public void Solve()
         {
-            _output = Solve(_s);
+            _output = LengthOfLongestSubstring(_s);
         }
     }
 }

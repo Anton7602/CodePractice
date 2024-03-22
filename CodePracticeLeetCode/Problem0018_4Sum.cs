@@ -10,7 +10,7 @@
         private int _target { get; set; }
         private IList<IList<int>> _output { get; set; }
 
-        public IList<IList<int>> Solve(int[] nums, int target)
+        public IList<IList<int>> FourSum(int[] nums, int target)
         {
             Array.Sort(nums);
             return nSum(4, nums, target).ToArray();
@@ -64,34 +64,8 @@
 
         public void ReadInput()
         {
-            try
-            {
-                Console.WriteLine("Enter Array of Integers (nums):");
-                string? line1 = Console.ReadLine();
-                if (!string.IsNullOrEmpty(line1))
-                {
-                    var splitLine1 = line1.Split(' ');
-                    _nums = new int[splitLine1.Length];
-                    for (int i = 0; i < splitLine1.Length; i++)
-                    {
-                        _nums[i] = Convert.ToInt32(splitLine1[i]);
-                    }
-                }
-                Console.WriteLine("Enter target number (target):");
-                if (int.TryParse(Console.ReadLine(), out int target))
-                {
-                    _target = target;
-                }
-                else
-                {
-                    throw new ArgumentException();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Provided invalid input data");
-                Console.WriteLine(ex.Message);
-            }
+            _nums = ProblemIO.ReadIntArrayFromConsole("Enter Array of Integers (nums):");
+            _target = ProblemIO.ReadIntFromConsole("Enter target number (target):");
         }
 
         public void ShowAnswer()
@@ -107,7 +81,7 @@
 
         public void Solve()
         {
-            _output = Solve(_nums, _target);
+            _output = FourSum(_nums, _target);
         }
     }
 }

@@ -15,7 +15,7 @@
             ListNode list1 = new ListNode(1, new ListNode(2, new ListNode(4)));
             ListNode list2 = new ListNode(1, new ListNode(3, new ListNode(4)));
             ListNode output = new ListNode(1, new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(4))))));
-            Assert.That(problem.Solve(list1, list2), Is.EqualTo(output));
+            Assert.That(problem.MergeTwoLists(list1, list2), Is.EqualTo(output));
         }
 
         [Test]
@@ -24,7 +24,7 @@
             ListNode list1 = null;
             ListNode list2 = null;
             ListNode output = null;
-            Assert.That(problem.Solve(list1, list2), Is.EqualTo(output));
+            Assert.That(problem.MergeTwoLists(list1, list2), Is.EqualTo(output));
         }
 
         [Test]
@@ -33,7 +33,7 @@
             ListNode list1 = null;
             ListNode list2 = new ListNode(0);
             ListNode output = new ListNode(0);
-            Assert.That(problem.Solve(list1, list2), Is.EqualTo(output));
+            Assert.That(problem.MergeTwoLists(list1, list2), Is.EqualTo(output));
         }
     }
 }

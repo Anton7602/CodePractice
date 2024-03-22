@@ -14,7 +14,7 @@
         {
             string s = "()";
             bool output = true;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.IsValid(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -22,7 +22,7 @@
         {
             string s = "()[]{}";
             bool output = true;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.IsValid(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -30,7 +30,7 @@
         {
             string s = "(]";
             bool output = false;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.IsValid(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -38,7 +38,7 @@
         {
             string s = "(";
             bool output = false;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.IsValid(s), Is.EqualTo(output));
         }
     }
 }

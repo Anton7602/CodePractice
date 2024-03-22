@@ -18,7 +18,7 @@
         private string? _s { get; set; }
         private int _output { get; set; }
 
-        public int Solve(string? s)
+        public int MyAtoi(string? s)
         {
             if (s == null) return 0;
             s = s.Trim();
@@ -43,19 +43,17 @@
 
         public void ReadInput()
         {
-            Console.WriteLine("Input string to parse to integer (s):");
-            _s = Console.ReadLine();
+            _s = ProblemIO.ReadStringFromConsole("Input string to parse to integer (s):");
         }
 
         public void ShowAnswer()
         {
-            Console.WriteLine("Answer:");
-            Console.WriteLine(_output);
+            ProblemIO.WriteValue(_output);
         }
 
         public void Solve()
         {
-            _output = Solve(_s);
+            _output = MyAtoi(_s);
         }
     }
 }

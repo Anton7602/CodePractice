@@ -9,7 +9,7 @@
         private int[] _nums { get; set; } = new int[0];
         private IList<IList<int>> _output { get; set; }
 
-        public IList<IList<int>> Solve(int[] nums)
+        public IList<IList<int>> ThreeSum(int[] nums)
         {
             List<List<int>> result = new List<List<int>>();
             Array.Sort(nums);
@@ -46,25 +46,7 @@
         }
         public void ReadInput()
         {
-            try
-            {
-                Console.WriteLine("Enter Array of Integers (nums):");
-                string? line1 = Console.ReadLine();
-                if (!string.IsNullOrEmpty(line1))
-                {
-                    var splitLine1 = line1.Split(' ');
-                    _nums = new int[splitLine1.Length];
-                    for (int i = 0; i < splitLine1.Length; i++)
-                    {
-                        _nums[i] = Convert.ToInt32(splitLine1[i]);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Provided invalid input data");
-                Console.WriteLine(ex.Message);
-            }
+            _nums = ProblemIO.ReadIntArrayFromConsole("Enter Array of Integers (nums):");
         }
 
         public void ShowAnswer()
@@ -80,7 +62,7 @@
 
         public void Solve()
         {
-            _output = Solve(_nums);
+            _output = ThreeSum(_nums);
         }
     }
 }

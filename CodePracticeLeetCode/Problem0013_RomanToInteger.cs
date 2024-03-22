@@ -23,7 +23,7 @@
         private string? _s { get; set; }
         private int _output { get; set; }
 
-        public int Solve(string? s)
+        public int RomanToInt(string? s)
         {
             if (string.IsNullOrEmpty(s)) return 0;
             int arabicNumber = 0;
@@ -95,19 +95,17 @@
 
         public void ReadInput()
         {
-            Console.WriteLine("Enter roman number (s):");
-            _s = Console.ReadLine();
+            _s = ProblemIO.ReadStringFromConsole("Enter roman number (s):");
         }
 
         public void ShowAnswer()
         {
-            Console.WriteLine("Answer");
-            Console.WriteLine(_output);
+            ProblemIO.WriteValue(_output);
         }
 
         public void Solve()
         {
-            _output = Solve(_s);
+            _output = RomanToInt(_s);
         }
     }
 }

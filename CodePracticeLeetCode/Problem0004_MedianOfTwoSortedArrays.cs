@@ -13,7 +13,7 @@ namespace CodePracticeLeetCode
         int[] _nums2 { get; set; } = [];
         double _output { get; set; }
 
-        public double Solve(int[] nums1, int[] nums2)
+        public double FindMedianSortedArrays(int[] nums1, int[] nums2)
         {
             if (nums2.Length == 0 && nums1.Length == 0) return 0;
             if (nums1.Length == 0) return findMedian(nums2);
@@ -98,47 +98,18 @@ namespace CodePracticeLeetCode
 
         public void ReadInput()
         {
-            try
-            {
-                Console.WriteLine("Enter first array of Integers (nums1):");
-                string? line1 = Console.ReadLine();
-                if (!string.IsNullOrEmpty(line1))
-                {
-                    var splitLine = line1.Split(' ');
-                    _nums1 = new int[splitLine.Length];
-                    for (int i = 0; i < splitLine.Length; i++)
-                    {
-                        _nums1[i] = Convert.ToInt32(splitLine[i]);
-                    }
-                }
-                Console.WriteLine("Enter second array of Integers (nums2):");
-                string? line2 = Console.ReadLine();
-                if (!string.IsNullOrEmpty(line1))
-                {
-                    var splitLine = line2.Split(' ');
-                    _nums2 = new int[splitLine.Length];
-                    for (int i = 0; i < splitLine.Length; i++)
-                    {
-                        _nums2[i] = Convert.ToInt32(splitLine[i]);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Provided invalid input data");
-                Console.WriteLine(ex.Message);
-            }
+            _nums1 = ProblemIO.ReadIntArrayFromConsole("Enter first array of Integers (nums1):");
+            _nums2 = ProblemIO.ReadIntArrayFromConsole("Enter second array of Integers (nums2):");
         }
 
         public void ShowAnswer()
         {
-            Console.WriteLine("Answer:");
-            Console.WriteLine(_output);
+            ProblemIO.WriteValue(_output);
         }
 
         public void Solve()
         {
-            _output = Solve(_nums1, _nums2);
+            _output = FindMedianSortedArrays(_nums1, _nums2);
         }
     }
 }

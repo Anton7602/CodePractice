@@ -15,7 +15,7 @@
             ListNode head  = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
             int n = 2;
             ListNode output = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(5))));
-            Assert.That(problem.Solve(head, n), Is.EqualTo(output));
+            Assert.That(problem.RemoveNthFromEnd(head, n), Is.EqualTo(output));
         }
 
         [Test]
@@ -24,7 +24,7 @@
             ListNode head = new ListNode(1, null); ;
             int n = 1;
             ListNode output = null;
-            Assert.That(problem.Solve(head, n), Is.EqualTo(output));
+            Assert.That(problem.RemoveNthFromEnd(head, n), Is.EqualTo(output));
         }
 
         [Test]
@@ -33,7 +33,7 @@
             ListNode head = new ListNode(1, new ListNode(2));
             int n = 1;
             ListNode output = new ListNode(1);
-            Assert.That(problem.Solve(head, n), Is.EqualTo(output));
+            Assert.That(problem.RemoveNthFromEnd(head, n), Is.EqualTo(output));
         }
 
         [Test]
@@ -42,7 +42,7 @@
             ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
             int n = 1;
             ListNode output = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
-            Assert.That(problem.Solve(head, n), Is.EqualTo(output));
+            Assert.That(problem.RemoveNthFromEnd(head, n), Is.EqualTo(output));
         }
     }
 }

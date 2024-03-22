@@ -15,7 +15,7 @@
         {
             string s = "III";
             int output = 3;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.RomanToInt(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -23,7 +23,7 @@
         {
             string s = "LVIII";
             int output = 58;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.RomanToInt(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -31,7 +31,7 @@
         {
             string s = "MCMXCIV";
             int output = 1994;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.RomanToInt(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -39,7 +39,7 @@
         {
             string s = "CDLXXXIX";
             int output = 489;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.RomanToInt(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -47,7 +47,7 @@
         {
             string s = "DCCCXCIV";
             int output = 894;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.RomanToInt(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -55,7 +55,7 @@
         {
             string s = "DXII";
             int output = 512;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.RomanToInt(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -63,7 +63,7 @@
         {
             string s = "X";
             int output = 10;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.RomanToInt(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -71,7 +71,7 @@
         {
             string s = "I";
             int output = 1;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.RomanToInt(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -79,7 +79,7 @@
         {
             string s = "MMMCMXCIX";
             int output = 3999;
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.RomanToInt(s), Is.EqualTo(output));
         }
     }
 }

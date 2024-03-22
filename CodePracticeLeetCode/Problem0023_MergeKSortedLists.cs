@@ -9,11 +9,11 @@
         private ListNode[] _lists { get; set; } = new ListNode[0];
         private ListNode _output { get; set; }
 
-        public ListNode? Solve(ListNode[] lists)
+        public ListNode? MergeKLists(ListNode[] lists)
         {
             if (lists == null) return null;
-            List<ListNode> nodes = lists.Where(l => l!=null).OrderBy(l => l.val).ToList();
-            if (nodes == null || nodes.Count()<1) return null;
+            List<ListNode> nodes = lists.Where(l => l != null).OrderBy(l => l.val).ToList();
+            if (nodes == null || nodes.Count() < 1) return null;
             ListNode firstNode = nodes[0];
             ListNode lastNode = firstNode;
             nodes.RemoveAt(0);
@@ -66,50 +66,22 @@
 
         public void ReadInput()
         {
-            Console.WriteLine("Input number of linked-lists (k):");
-            try
+            int k = ProblemIO.ReadIntFromConsole("Input number of linked-lists (k):");
+            _lists = new ListNode[k];
+            for (int i = 0; i < k; i++)
             {
-                if (int.TryParse(Console.ReadLine(), out int k))
-                {
-                    _lists = new ListNode[k];
-                    for (int i = 0; i < k; i++)
-                    {
-                        Console.WriteLine($"Enter {i + 1} list of elements (list{i}):");
-                        string? line = Console.ReadLine();
-                        if (!string.IsNullOrEmpty(line))
-                        {
-                            var splitLine1 = line.Split(' ');
-                            ListNode currentNode = new ListNode(Convert.ToInt32(splitLine1[0]));
-                            _lists[i] = currentNode;
-                            for (int j = 1; j < splitLine1.Length; j++)
-                            {
-                                ListNode tempNode = new ListNode(Convert.ToInt32(splitLine1[j]));
-                                currentNode.next = tempNode;
-                                currentNode = tempNode;
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    throw new ArgumentException();
-                }
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Provided invalid input");
+                _lists[i] = ProblemIO.ReadListNodeFromConsole($"Enter {i + 1} list of elements (list{i}):");
             }
         }
 
         public void ShowAnswer()
         {
-            Console.WriteLine("Answer:");
-            Console.WriteLine(_output.ToString());
+            ProblemIO.WriteValue(_output);
         }
 
         public void Solve()
         {
-            _output = Solve(_lists);
+            _output = MergeKLists(_lists);
         }
     }
 }

@@ -15,7 +15,7 @@
         {
             string s = "babad";
             string output = "bab";
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.LongestPalindrome(s), Is.EqualTo(output));
         }
 
 
@@ -24,7 +24,7 @@
         {
             string s = "cbbd";
             string output = "bb";
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.LongestPalindrome(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -32,7 +32,7 @@
         {
             string s = "a";
             string output = "a";
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.LongestPalindrome(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -40,7 +40,7 @@
         {
             string s = "abcdefg";
             string output = "a";
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.LongestPalindrome(s), Is.EqualTo(output));
         }
 
         [Test]
@@ -48,7 +48,7 @@
         {
             string s = "bb";
             string output = "bb";
-            Assert.That(problem.Solve(s), Is.EqualTo(output));
+            Assert.That(problem.LongestPalindrome(s), Is.EqualTo(output));
         }
     }
 }

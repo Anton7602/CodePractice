@@ -23,7 +23,7 @@
         private int _num {  get; set; }
         private string? _output {  get; set; }
 
-        public string Solve(int num)
+        public string IntToRoman(int num)
         {
             string romanNumber = string.Empty;
             Dictionary<int, string> digitToRoman = new Dictionary<int, string>();
@@ -68,26 +68,17 @@
 
         public void ReadInput()
         {
-            Console.WriteLine("Enter input number (num)");
-            if (int.TryParse(Console.ReadLine(), out int num))
-            {
-                _num = num;
-            } else
-            {
-                Console.WriteLine("Failed to parse input number");
-                throw new ArgumentException();
-            }
+            _num = ProblemIO.ReadIntFromConsole("Enter input number (num)");
         }
 
         public void ShowAnswer()
         {
-            Console.WriteLine("Answer:");
-            Console.WriteLine(_output);
+            ProblemIO.WriteValue(_output);
         }
 
         public void Solve()
         {
-            _output = Solve(_num);
+            _output = IntToRoman(_num);
         }
     }
 }

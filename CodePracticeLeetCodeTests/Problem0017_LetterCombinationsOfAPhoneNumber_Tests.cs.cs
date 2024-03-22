@@ -14,7 +14,7 @@
         {
             string digits = "23";
             List<string> output = new List<string>() { "ad", "ae", "af", "bd", "be", "bf","cd","ce","cf"};
-            CollectionAssert.AreEquivalent(problem.Solve(digits), output);
+            CollectionAssert.AreEquivalent(problem.LetterCombinations(digits), output);
         }
 
         [Test]
@@ -22,7 +22,7 @@
         {
             string digits = "";
             List<string> output = new List<string>() { };
-            CollectionAssert.AreEquivalent(problem.Solve(digits), output);
+            CollectionAssert.AreEquivalent(problem.LetterCombinations(digits), output);
         }
 
         [Test]
@@ -30,7 +30,7 @@
         {
             string digits = "2";
             List<string> output = new List<string>() { "a", "b", "c" };
-            CollectionAssert.AreEquivalent(problem.Solve(digits), output);
+            CollectionAssert.AreEquivalent(problem.LetterCombinations(digits), output);
         }
     }
 }

@@ -12,7 +12,7 @@
         private string? _p { get; set; }
         private bool _output { get; set; }
 
-        public bool Solve(string? s, string? p)
+        public bool IsMatch(string? s, string? p)
         {
             bool[,] matchingMatrix = new bool[s.Length + 1, p.Length + 1];
             matchingMatrix[0, 0] = true;
@@ -47,21 +47,18 @@
 
         public void ReadInput()
         {
-            Console.WriteLine("Enter input string (s):");
-            _s = Console.ReadLine();
-            Console.WriteLine("Enter string pattern (p):");
-            _p = Console.ReadLine();
+            _s = ProblemIO.ReadStringFromConsole("Enter input string (s):");
+            _p = ProblemIO.ReadStringFromConsole("Enter string pattern (p):");
         }
 
         public void ShowAnswer()
         {
-            Console.WriteLine("Answer:");
-            Console.WriteLine(_output);
+            ProblemIO.WriteValue(_output);
         }
 
         public void Solve()
         {
-            _output = Solve(_s, _p);
+            _output = IsMatch(_s, _p);
         }
     }
 }

@@ -6,21 +6,22 @@
      */
     public class Problem0007_ReverseInteger : IProblem
     {
-        private int _x {  get; set; }
-        private int _output {  get; set; }
+        private int _x { get; set; }
+        private int _output { get; set; }
 
-        public int Solve(int x)
+        public int Reverse(int x)
         {
             int reverseNumber = 0;
             string number = x.ToString();
             bool isNegative = (number[0].Equals('-'));
             if (isNegative) number = number.Substring(1);
-            for (int i = number.Length-1; i>=0; i--)
+            for (int i = number.Length - 1; i >= 0; i--)
             {
-                if (reverseNumber + Int32.Parse(number[i].ToString())*Math.Pow(10, i) < Int32.MaxValue)
+                if (reverseNumber + Int32.Parse(number[i].ToString()) * Math.Pow(10, i) < Int32.MaxValue)
                 {
                     reverseNumber += Int32.Parse(number[i].ToString()) * (int)Math.Pow(10, i);
-                } else
+                }
+                else
                 {
                     return 0;
                 }
@@ -30,22 +31,17 @@
 
         public void ReadInput()
         {
-            Console.WriteLine("Input original integer (x): ");
-            if (Int32.TryParse(Console.ReadLine(), out int x))
-            {
-                _x = x;
-            }
+            _x = ProblemIO.ReadIntFromConsole("Input original integer (x): ");
         }
 
         public void ShowAnswer()
         {
-            Console.WriteLine("Answer:");
-            Console.WriteLine(_output);
+            ProblemIO.WriteValue(_output);
         }
 
         public void Solve()
         {
-            _output = Solve(_x);
+            _output = Reverse(_x);
         }
     }
 }

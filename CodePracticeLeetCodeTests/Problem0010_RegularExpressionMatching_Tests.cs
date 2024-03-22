@@ -16,7 +16,7 @@
             string s = "aa";
             string p = "a";
             bool output = false;
-            Assert.That(problem.Solve(s,p), Is.EqualTo(output));
+            Assert.That(problem.IsMatch(s,p), Is.EqualTo(output));
         }
 
         [Test]
@@ -25,7 +25,7 @@
             string s = "aa";
             string p = "a*";
             bool output = true;
-            Assert.That(problem.Solve(s, p), Is.EqualTo(output));
+            Assert.That(problem.IsMatch(s, p), Is.EqualTo(output));
         }
 
         [Test]
@@ -34,7 +34,7 @@
             string s = "aa";
             string p = ".*";
             bool output = true;
-            Assert.That(problem.Solve(s, p), Is.EqualTo(output));
+            Assert.That(problem.IsMatch(s, p), Is.EqualTo(output));
         }
 
         [Test]
@@ -43,7 +43,7 @@
             string s = "xaabyc";
             string p = "xa*b.c";
             bool output = true;
-            Assert.That(problem.Solve(s, p), Is.EqualTo(output));
+            Assert.That(problem.IsMatch(s, p), Is.EqualTo(output));
         }
     }
 }

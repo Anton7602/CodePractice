@@ -16,7 +16,7 @@
             string s = "PAYPALISHIRING";
             int numRows = 3;
             string output = "PAHNAPLSIIGYIR";
-            Assert.That(problem.Solve(s, numRows), Is.EqualTo(output));
+            Assert.That(problem.Convert(s, numRows), Is.EqualTo(output));
         }
 
         [Test]
@@ -25,7 +25,7 @@
             string s = "PAYPALISHIRING";
             int numRows = 4;
             string output = "PINALSIGYAHRPI";
-            Assert.That(problem.Solve(s, numRows), Is.EqualTo(output));
+            Assert.That(problem.Convert(s, numRows), Is.EqualTo(output));
         }
 
         [Test]
@@ -34,7 +34,7 @@
             string s = "A";
             int numRows = 1;
             string output = "A";
-            Assert.That(problem.Solve(s, numRows), Is.EqualTo(output));
+            Assert.That(problem.Convert(s, numRows), Is.EqualTo(output));
         }
 
         [Test]
@@ -43,7 +43,7 @@
             string s = "AsdfrsSFSDf,.sdffsetcset";
             int numRows = 1;
             string output = "AsdfrsSFSDf,.sdffsetcset";
-            Assert.That(problem.Solve(s, numRows), Is.EqualTo(output));
+            Assert.That(problem.Convert(s, numRows), Is.EqualTo(output));
         }
     }
 }

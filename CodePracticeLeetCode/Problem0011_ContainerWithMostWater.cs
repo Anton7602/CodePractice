@@ -11,7 +11,7 @@
         private int[] _height { get; set; } = new int[0];
         private int _output {  get; set; }
 
-        public int Solve(int[] height)
+        public int MaxArea(int[] height)
         {
             int maxArea = 0;
             int leftIndexer = 0;
@@ -33,37 +33,17 @@
 
         public void ReadInput()
         {
-            Console.WriteLine("Enter heights array (height):");
-            try
-            {
-                string? line1 = Console.ReadLine();
-                if (!string.IsNullOrEmpty(line1))
-                {
-                    var splitLine1 = line1.Split(' ');
-                    _height = new int[splitLine1.Length];
-                    for (int i = 0; i < splitLine1.Length; i++)
-                    {
-                        _height[i] = Convert.ToInt32(splitLine1[i]);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Provided invalid input data");
-                Console.WriteLine(ex.Message);
-            }
-
+            _height = ProblemIO.ReadIntArrayFromConsole("Enter heights array (height):");
         }
 
         public void ShowAnswer()
         {
-            Console.WriteLine("Answer:");
-            Console.WriteLine(_output);
+            ProblemIO.WriteValue(_output);
         }
 
         public void Solve()
         {
-            _output = Solve(_height);
+            _output = MaxArea(_height);
         }
     }
 }

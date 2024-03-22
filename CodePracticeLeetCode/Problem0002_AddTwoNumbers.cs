@@ -12,7 +12,7 @@
         ListNode _output { get; set; }
 
 
-        public ListNode Solve(ListNode l1, ListNode l2)
+        public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
             return createNewListNode(l1, l2, false);
         }
@@ -54,93 +54,18 @@
 
         public void ReadInput()
         {
-            Console.WriteLine("Enter number for a first list (l1)");
-            _l1 = ListNode.ToList(Console.ReadLine());
-            Console.WriteLine("Enter number for a second list (l2)");
-            _l2 = ListNode.ToList(Console.ReadLine());
-
+            _l1 = ProblemIO.ReadListNodeFromConsole("Enter first list (l1)");
+            _l2 = ProblemIO.ReadListNodeFromConsole("Enter second list (l2)");
         }
 
         public void ShowAnswer()
         {
-            Console.WriteLine("Answer:");
-            Console.WriteLine(_output.ToString());
+            ProblemIO.WriteValue(_output);
         }
 
         public void Solve()
         {
-            _output = Solve(_l1, _l2);
-        }
-    }
-
-    public class ListNode
-    {
-        public int val;
-        public ListNode next;
-        public ListNode(int val = 0, ListNode next = null)
-        {
-            this.val = val;
-            this.next = next;
-        }
-
-        public static ListNode ToList(string number)
-        {
-            if (string.IsNullOrEmpty(number)) return new ListNode();
-            char[] digits = number.ToCharArray();
-            Array.Reverse(digits);
-            ListNode firstNode = new ListNode(digits[0] - '0');
-            ListNode previousNode = firstNode;
-            for (int i = 1; i < digits.Length; i++)
-            {
-                ListNode currentNode = new ListNode(digits[i] - '0');
-                previousNode.next = currentNode;
-                previousNode = currentNode;
-            }
-            return firstNode;
-        }
-
-        public static ListNode ToList(int number)
-        {
-            return ToList(number.ToString());
-        }
-
-        public static ListNode ToList(int[] numbers)
-        {
-            return new ListNode();
-        }
-
-        public override string ToString()
-        {
-            string number = string.Empty;
-            ListNode currentListNode = this;
-            while (currentListNode != null)
-            {
-                number += currentListNode.val.ToString();
-                currentListNode = currentListNode.next;
-            }
-            return ReverseString(number);
-        }
-
-        public override bool Equals(object? obj)
-        {
-            if (obj == null) return false;
-            if (!(obj is ListNode)) return false;
-            return CompareListNodes(this, obj as ListNode);
-        }
-
-        private bool CompareListNodes(ListNode? node1, ListNode? node2)
-        {
-            if (node1 == null && node2 == null) return true;
-            if (node1 == null || node2 == null) return false;
-            if (node1.val!=node2.val) return false;
-            return CompareListNodes(node1.next, node2.next);
-        }
-
-        private static string ReverseString(string originalString)
-        {
-            char[] stringArray = originalString.ToCharArray();
-            Array.Reverse(stringArray);
-            return new string(stringArray);
+            _output = AddTwoNumbers(_l1, _l2);
         }
     }
 }

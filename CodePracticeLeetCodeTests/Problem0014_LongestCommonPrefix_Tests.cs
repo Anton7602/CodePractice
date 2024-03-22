@@ -15,7 +15,7 @@
         {
             string[] strs = { "flower", "flow", "flight" };
             string output = "fl";
-            Assert.That(problem.Solve(strs), Is.EqualTo(output));
+            Assert.That(problem.LongestCommonPrefix(strs), Is.EqualTo(output));
         }
 
         [Test]
@@ -23,7 +23,7 @@
         {
             string[] strs = { "dog", "racecar", "car" };
             string output = "";
-            Assert.That(problem.Solve(strs), Is.EqualTo(output));
+            Assert.That(problem.LongestCommonPrefix(strs), Is.EqualTo(output));
         }
 
         [Test]
@@ -31,7 +31,7 @@
         {
             string[] strs = { "substring" };
             string output = "substring";
-            Assert.That(problem.Solve(strs), Is.EqualTo(output));
+            Assert.That(problem.LongestCommonPrefix(strs), Is.EqualTo(output));
         }
 
         [Test]
@@ -39,7 +39,7 @@
         {
             string[] strs = { "", "" };
             string output = "";
-            Assert.That(problem.Solve(strs), Is.EqualTo(output));
+            Assert.That(problem.LongestCommonPrefix(strs), Is.EqualTo(output));
         }
 
         [Test]
@@ -47,7 +47,7 @@
         {
             string[] strs = { "testcase", "testcase" };
             string output = "testcase";
-            Assert.That(problem.Solve(strs), Is.EqualTo(output));
+            Assert.That(problem.LongestCommonPrefix(strs), Is.EqualTo(output));
         }
 
         [Test]
@@ -55,7 +55,7 @@
         {
             string[] strs = { };
             string output = "";
-            Assert.That(problem.Solve(strs), Is.EqualTo(output));
+            Assert.That(problem.LongestCommonPrefix(strs), Is.EqualTo(output));
         }
     }
 }

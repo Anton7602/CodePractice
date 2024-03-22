@@ -9,7 +9,7 @@
         private string _digits {  get; set; }
         private IList<string> _output {  get; set; } = new List<string>();
 
-        public IList<string> Solve(string digits)
+        public IList<string> LetterCombinations(string digits)
         {
             Dictionary<char, List<char>> digitToLetterMap = new Dictionary<char, List<char>>();
             digitToLetterMap.Add('2', new List<char>() { 'a', 'b', 'c' });
@@ -41,8 +41,7 @@
 
         public void ReadInput()
         {
-            Console.WriteLine("Enter string with number (digits):");
-            _digits = Console.ReadLine();
+            _digits = ProblemIO.ReadStringFromConsole("Enter string with number (digits):");
         }
 
         public void ShowAnswer()
@@ -56,7 +55,7 @@
 
         public void Solve()
         {
-            _output = Solve(_digits);
+            _output = LetterCombinations(_digits);
         }
     }
 }
