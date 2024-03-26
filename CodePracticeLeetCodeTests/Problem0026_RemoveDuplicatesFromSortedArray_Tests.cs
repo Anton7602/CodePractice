@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace CodePracticeLeetCodeTests
+﻿namespace CodePracticeLeetCodeTests
 {
     internal class Problem0026_RemoveDuplicatesFromSortedArray_Tests
     {
