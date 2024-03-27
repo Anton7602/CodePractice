@@ -4,7 +4,7 @@ namespace CodePractice
 {
     internal class Program
     {
-        static IProblem problem = new Problem0024_SwapNodesInPairs();
+        static IProblem problem = new Problem0027_RemoveElement();
 
         static void Main(string[] args)
         {
