@@ -4,7 +4,7 @@ namespace CodePractice
 {
     internal class Program
     {
-        static IProblem problem = new Problem0028_FindTheIndexOfTheFirstOccurrenceInAString();
+        static IProblem problem = new Problem0030_SubstringWithConcatenationOfAllWords();
 
         static void Main(string[] args)
         {
