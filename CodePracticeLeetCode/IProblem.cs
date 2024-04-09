@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace CodePracticeLeetCode
 {
@@ -26,11 +27,20 @@ namespace CodePracticeLeetCode
             throw new ArgumentException();
         }
 
-        public static string[] ReadStringArrayFromConsole(string promtMessage = "Enter array of strings", char? separator = null)
+        public static string[] ReadStringArrayFromConsole(string promtMessage = "Enter array of strings", char separator = ' ')
         {
             Console.WriteLine(promtMessage);
             string line = Console.ReadLine();
-            return (separator == null) ? line.Split(' ') : line.Split(separator.GetValueOrDefault());
+            return line.Split(separator);
+        }
+
+        public static char[] ReadCharArrayFromConsole(string promtMessage = "Enter array of chars", char? separator = ' ')
+        {
+            Console.WriteLine(promtMessage);
+            string line = Console.ReadLine();
+            if (separator!=null)
+                line = line.Replace(separator.GetValueOrDefault().ToString(), "");
+            return line.ToCharArray();
         }
 
         public static int[] ReadIntArrayFromConsole(string promtMessage = "Enter array of integers", char? separator = null)
